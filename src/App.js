@@ -9,7 +9,8 @@ import Reflection from './components/Reflection';
 const useStyles = makeStyles({
   root: {
     maxWidth: 1080,
-    margin: '120px auto'
+    margin: '120px auto',
+    overflow: 'hidden'
   },
 });
 
@@ -30,8 +31,8 @@ const myTheme = createMuiTheme({
     fontFamily: "'Nunito Sans', 'Helvetica', 'Arial', sans-serif",
     h1: {
       textTransform: "lowercase",
-      fontSize: 34,
-      fontWeight: 'bolder',
+      fontSize: 45,
+      fontWeight: 900,
       marginBottom: 80,
       marginTop: 100
     },
@@ -39,14 +40,16 @@ const myTheme = createMuiTheme({
       textTransform: "uppercase",
       fontSize: 22,
       marginBottom: 40,
-      marginTop: 20
+      marginTop: 20,
+      fontWeight: 'bold'
     },
     h3: {
       textTransform: "uppercase",
       fontSize: 18,
     },
     body1: {
-      color: '#707070'
+      color: '#707070',
+      fontSize:'1.25rem'
     }
   }
 });
