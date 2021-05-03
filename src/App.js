@@ -8,10 +8,16 @@ import Reflection from './components/Reflection';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 1080,
-    margin: '120px auto',
-    overflow: 'hidden'
-  },
+    marginTop: 120,
+    overflow: 'hidden',
+    '& li::marker': {
+      color: '#707070',
+      display: 'inline-block',
+      width: '1em',
+      marginLeft: '-1em',
+      fontSize: '1.25rem'
+    },
+  }
 });
 
 const myTheme = createMuiTheme({
@@ -33,8 +39,7 @@ const myTheme = createMuiTheme({
       textTransform: "lowercase",
       fontSize: 45,
       fontWeight: 900,
-      marginBottom: 80,
-      marginTop: 100
+      marginBottom: 40,
     },
     h2: {
       textTransform: "uppercase",
@@ -49,7 +54,10 @@ const myTheme = createMuiTheme({
     },
     body1: {
       color: '#707070',
-      fontSize:'1.25rem'
+      fontSize: '1.25rem'
+    },
+    body2: {
+      color: '#707070',
     }
   }
 });

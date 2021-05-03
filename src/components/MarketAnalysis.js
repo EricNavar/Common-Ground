@@ -3,6 +3,12 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
+  marketAnalysis: {
+    marginTop: 100,
+    maxWidth: 1080,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
   circle: {
     borderStyle: 'solid',
     borderWidth: 2,
@@ -13,8 +19,6 @@ const useStyles = makeStyles({
   aspectRatioBox: {
     width: 400,
   },
-  absoluteText: {
-  }
 });
 
 
@@ -24,7 +28,7 @@ export default function Error404Page() {
   }, []);
   const classes = useStyles();
   return (
-    <section>
+    <section className={classes.marketAnalysis}>
       <Typography component='h1' variant='h1' color='primary'>
         Market Analysis
       </Typography>
@@ -35,9 +39,6 @@ export default function Error404Page() {
         Our stakeholders range from those working on the app, to our users, to restaurants who would
         like to boost their online presence, as well as delivery services and food critics.
       </Typography>
-      <Typography>
-        how might we make it easier for users to collaboratively choose restaurants?
-      </Typography>
       <Typography component='h2' variant='h2' color='secondary'>
         IS THERE ENOUGH MARKET FOR OUR PRODUCT?
       </Typography>
@@ -45,19 +46,19 @@ export default function Error404Page() {
         The existing apps for restaurant browsing makes food an individual effort when in reality it is a group experience. There is opportunity to further enhance the food culture by creating a place where friends and family can together decide on a new place to make memories.
       </Typography>
       <div className={classes.aspectRatioBox}>
-        <div className={classes.circle} style={{height:0,paddingTop:'100%',position:'relative'}}>
-          <div style={{top:'50%',right:'50%',position:'absolute',transform:'translate(50%, -50%)'}}>
+        <div className={classes.circle} style={{ height: 0, paddingTop: '100%', position: 'relative' }}>
+          <div style={{ top: '50%', right: '50%', position: 'absolute', transform: 'translate(50%, -50%)' }}>
             <Typography className={classes.absoluteText}>
               delivery
             </Typography>
-            <div className={classes.circle} style={{height:0,paddingTop:'100%',position:'relative', width: 250}}>
-              <div style={{top:'50%',right:'50%',position:'absolute',transform:'translate(50%, -50%)'}}>
+            <div className={classes.circle} style={{ height: 0, paddingTop: '100%', position: 'relative', width: 250 }}>
+              <div style={{ top: '50%', right: '50%', position: 'absolute', transform: 'translate(50%, -50%)' }}>
                 <Typography className={classes.absoluteText}>
                   users
                 </Typography>
-                <div className={classes.circle} style={{width:100,height:100}}>
+                <div className={classes.circle} style={{ width: 100, height: 100 }}>
                   <Typography className={classes.absoluteText}>
-                    designers<br/>+ devs
+                    designers<br />+ devs
                   </Typography>
                 </div>
                 <Typography className={classes.absoluteText}>

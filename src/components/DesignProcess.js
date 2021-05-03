@@ -1,13 +1,24 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  designProcess: {
+    maxWidth: 1080,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: 100
+  }
+});
 
 export default function Error404Page() {
   React.useEffect(() => {
     document.title = 'Page not found | DC Rock Fitness';
   }, []);
+  const classes = useStyles();
   return (
-    <section>
+    <section className={classes.designProcess}>
       <Typography component='h1' variant='h1' color='primary'>
         design process
       </Typography>

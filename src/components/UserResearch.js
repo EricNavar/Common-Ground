@@ -1,15 +1,47 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import Link from '@material-ui/core/Link';
 import Emoji1 from './../assets/emoji1.png';
 import Emoji2 from './../assets/emoji2.png';
 import Emoji3 from './../assets/emoji3.png';
-import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
+  userResearch: {
+    maxWidth: 1080,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: 100
+  },
   profileHeader: {
     textAlign: 'center'
   },
+  interests: {
+    marginBottom: 16,
+    '& div': {
+      borderWidth: 3,
+      borderRadius: 8,
+      borderStyle: 'solid',
+      marginTop: 8,
+      marginBottom: 8,
+      padding: 6,
+    },
+    '& :nth-child(1)': {
+      borderColor:'#FF6E6E',
+    },
+    '& :nth-child(2)': {
+      borderColor:'#FF9933',
+      width: '80%'
+    },
+    '& :nth-child(3)': {
+      borderColor:'#FFD731',
+      width: '60%'
+    },
+  },
+  link: {
+    textDecoration: 'underline'
+  }
 });
 
 export default function Error404Page() {
@@ -18,7 +50,7 @@ export default function Error404Page() {
   }, []);
   const classes = useStyles();
   return (
-    <section>
+    <section className={classes.userResearch}>
       <Typography component='h1' variant='h1' color='primary' align='center'>
         User Research
       </Typography>
@@ -29,6 +61,23 @@ export default function Error404Page() {
             <Typography component='h2' variant='h2' color='secondary'>
               EM SANCHEZ
             </Typography>
+          </div>
+          <div className={classes.interests}>
+            <div>
+              <Typography variant='body2'>
+                Price
+              </Typography>
+            </div>
+            <div>
+              <Typography variant='body2'>
+                Reviews
+              </Typography>
+            </div>
+            <div>
+              <Typography variant='body2'>
+                Location
+              </Typography>
+            </div>
           </div>
           <ul>
             <li>
@@ -53,7 +102,7 @@ export default function Error404Page() {
           <ul>
             <li>
               <Typography>
-                Having to google “Best ___ in Gainesville” to find a restaurant and relying on Google’s algorithm to show her the same options
+                Having to Google “Best ___ in Gainesville” to find a restaurant and relying on Google’s algorithm to show her the same options
               </Typography>
             </li>
           </ul>
@@ -64,6 +113,23 @@ export default function Error404Page() {
             <Typography component='h2' variant='h2' color='secondary'>
               COOPER FAMILY
             </Typography>
+          </div>
+          <div className={classes.interests}>
+            <div>
+              <Typography variant='body2'>
+                Best bang for your buck
+              </Typography>
+            </div>
+            <div>
+              <Typography variant='body2'>
+                Variety in menu
+              </Typography>
+            </div>
+            <div>
+              <Typography variant='body2'>
+                Sanitation
+              </Typography>
+            </div>
           </div>
           <ul>
             <li>
@@ -99,6 +165,23 @@ export default function Error404Page() {
             <Typography component='h2' variant='h2' color='secondary'>
               Will Thompson
             </Typography>
+          </div>
+          <div className={classes.interests}>
+            <div>
+              <Typography variant='body2'>
+                Quiet place
+              </Typography>
+            </div>
+            <div>
+              <Typography variant='body2'>
+                Good food
+              </Typography>
+            </div>
+            <div>
+              <Typography variant='body2'>
+                Local place
+              </Typography>
+            </div>
           </div>
           <ul>
             <li>
@@ -139,6 +222,14 @@ export default function Error404Page() {
           </ul>
         </Grid>
       </Grid>
+      <Link href='https://www.figma.com/file/lchOctjE3qJadScBVgdWlz/?node-id=54%3A327' variant='h2' className={classes.link}>
+        WIREFRAMES LINK
+      </Link>
+      <br/>
+      <br/>
+      <Link href='https://www.figma.com/file/lchOctjE3qJadScBVgdWlz/?node-id=54%3A1879' variant='h2' className={classes.link}>
+        TASK FLOW LINK
+      </Link>
     </section>
   );
 }
