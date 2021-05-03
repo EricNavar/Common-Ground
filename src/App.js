@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Header from './components/Header';
 import ProjectBackground from './components/ProjectBackground';
 import MarketAnalysis from './components/MarketAnalysis';
 import UserResearch from './components/UserResearch';
@@ -8,7 +9,6 @@ import Reflection from './components/Reflection';
 
 const useStyles = makeStyles({
   root: {
-    marginTop: 120,
     overflow: 'hidden',
     '& li::marker': {
       color: '#707070',
@@ -67,6 +67,7 @@ function App() {
   return (
     <ThemeProvider theme={myTheme}>
       <div className={classes.root}>
+        <Header />
         <ProjectBackground />
         <MarketAnalysis />
         <UserResearch />
