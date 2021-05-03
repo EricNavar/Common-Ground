@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 
 export default function Error404Page() {
   React.useEffect(() => {
-    document.title = 'Page not found | DC Rock Fitness';
+    document.title = 'Common Ground';
   }, []);
   const classes = useStyles();
   return (

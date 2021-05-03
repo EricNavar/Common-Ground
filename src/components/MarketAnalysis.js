@@ -10,16 +10,37 @@ const useStyles = makeStyles({
     marginLeft: 'auto',
     marginRight: 'auto',
   },
-  circle: {
+  circleOuter: {
     borderStyle: 'solid',
-    borderWidth: 2,
+    borderWidth: 4,
     borderColor: 'red',
     borderRadius: '50%',
     textAlign: 'center',
+    height: 0, paddingTop: '100%', position: 'relative'
   },
-  aspectRatioBox: {
-    width: 400,
+  innermostCircle: {
+    borderStyle: 'solid',
+    borderWidth: 4,
+    borderColor: '#FFD731',
+    borderRadius: '50%',
+    textAlign: 'center',
+    width: 100,
+    height: 100,
+    display: 'flex',
+    alignItems: 'center'
   },
+  circleInner: {
+    top: '50%',
+    right: '50%',
+    position: 'absolute',
+    transform: 'translate(50%, -50%)'
+  },
+  bottomMargin: {
+    marginBottom: 24
+  },
+  topMargin: {
+    marginTop: 24
+  }
 });
 
 
@@ -30,7 +51,41 @@ export default function Error404Page() {
   const classes = useStyles();
   return (
     <section className={classes.marketAnalysis}>
-      <Grid container>
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+      >
+        <Grid item xs={12} md={6}>
+          <div id='stakeholders' style={{width:400}}>
+            <div className={classes.circleOuter} color='primary'>
+              <div className={classes.circleInner}>
+                <Typography variant='body2' className={classes.bottomMargin} style={{color:'#FF6E6E'}}>
+                  delivery
+                </Typography>
+                <div className={classes.circleOuter} style={{ width: 250, borderColor: '#FF9933' }}>
+                  <div className={classes.circleInner}>
+                    <Typography variant='body2' className={classes.bottomMargin} style={{color:'#FF9933'}}>
+                      users
+                    </Typography>
+                    <div className={classes.innermostCircle}>
+                      <Typography variant='body2' color='textSecondary' style={{margin:'auto'}}>
+                        designers<br />+ devs
+                      </Typography>
+                    </div>
+                    <Typography variant='body2' className={classes.topMargin} style={{color:'#FF9933'}}>
+                      restaurants
+                    </Typography>
+                  </div>
+                </div>
+                <Typography variant='body2' className={classes.topMargin} color='primary'>
+                  critics
+                </Typography>
+              </div>
+            </div>
+          </div>
+        </Grid>
         <Grid item xs={12} md={6}>
           <Typography component='h1' variant='h1' color='primary'>
             Market Analysis
@@ -48,35 +103,6 @@ export default function Error404Page() {
           <Typography>
             The existing apps for restaurant browsing makes food an individual effort when in reality it is a group experience. There is opportunity to further enhance the food culture by creating a place where friends and family can together decide on a new place to make memories.
           </Typography>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <div id='graph' className={classes.aspectRatioBox}>
-            <div className={classes.circle} style={{ height: 0, paddingTop: '100%', position: 'relative' }}>
-              <div style={{ top: '50%', right: '50%', position: 'absolute', transform: 'translate(50%, -50%)' }}>
-                <Typography className={classes.absoluteText}>
-                  delivery
-                </Typography>
-                <div className={classes.circle} style={{ height: 0, paddingTop: '100%', position: 'relative', width: 250 }}>
-                  <div style={{ top: '50%', right: '50%', position: 'absolute', transform: 'translate(50%, -50%)' }}>
-                    <Typography className={classes.absoluteText}>
-                      users
-                    </Typography>
-                    <div className={classes.circle} style={{ width: 100, height: 100 }}>
-                      <Typography className={classes.absoluteText}>
-                        designers<br />+ devs
-                      </Typography>
-                    </div>
-                    <Typography className={classes.absoluteText}>
-                      restaurants
-                    </Typography>
-                  </div>
-                </div>
-                <Typography className={classes.absoluteText}>
-                  critics
-                </Typography>
-              </div>
-            </div>
-          </div>
         </Grid>
       </Grid>
     </section>
