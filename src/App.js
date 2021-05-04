@@ -39,12 +39,12 @@ const myTheme = createMuiTheme({
       textTransform: "lowercase",
       fontSize: 45,
       fontWeight: 900,
-      marginBottom: 40,
+      marginBottom: 50,
     },
     h2: {
       textTransform: "uppercase",
       fontSize: 22,
-      marginBottom: 40,
+      marginBottom: 30,
       marginTop: 20,
       fontWeight: 'bold'
     },

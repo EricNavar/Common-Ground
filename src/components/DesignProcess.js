@@ -2,13 +2,20 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles({
   designProcess: {
     maxWidth: 1080,
     marginLeft: 'auto',
     marginRight: 'auto',
+    paddingRight: '10%',
+    paddingLeft: '10%',
     marginTop: 100
+  },
+  link: {
+    textDecoration: 'underline',
+    marginBottom: 16
   }
 });
 
@@ -28,6 +35,7 @@ export default function Error404Page() {
         justify="center"
         alignItems="center"
         spacing={2}
+        style={{marginBottom:40}}
       >
         <Grid item xs={12} md={6}>
           <Typography component='h2' variant='h2' color='secondary'>
@@ -164,6 +172,14 @@ export default function Error404Page() {
           </ul>
         </Grid>
       </Grid>
+      <Link href='https://www.figma.com/file/lchOctjE3qJadScBVgdWlz/?node-id=54%3A327' variant='h2' className={classes.link}>
+        WIREFRAMES LINK
+      </Link>
+      <br/>
+      <br/>
+      <Link href='https://www.figma.com/file/lchOctjE3qJadScBVgdWlz/?node-id=54%3A1879' variant='h2' className={classes.link}>
+        TASK FLOW LINK
+      </Link>
     </section>
   );
 }

@@ -9,13 +9,16 @@ const useStyles = makeStyles({
     maxWidth: 1080,
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginTop: 100
+    paddingRight: '10%',
+    paddingLeft: '10%',
+    marginTop: 100,
+    position: 'relative'
   },
   splashImage: {
     width: '60%',
     position: 'absolute',
-    right: '-20%',
-    top: 0
+    right: '-25%',
+    top: '-10%'
   },
 });
 
@@ -42,7 +45,7 @@ export default function Error404Page() {
       <Typography>
         <span role='img'>🤔</span> <b>how might we make it easier for users to collaboratively choose restaurants?</b>
       </Typography>
-      <Grid container>
+      <Grid container spacing={8} style={{marginTop:20}}>
         <Grid item>
           <Typography component='h2' variant='h2' color='secondary'>
             PRODUCT GOALS

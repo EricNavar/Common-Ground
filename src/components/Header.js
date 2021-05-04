@@ -8,12 +8,16 @@ const useStyles = makeStyles({
     maxWidth: 1080,
     marginLeft: 'auto',
     marginRight: 'auto',
+    paddingRight: '10%',
+    paddingLeft: '10%',
     marginTop: 100
   },
   headerText: {
     maxWidth: 1080,
     marginLeft: 'auto',
     marginRight: 'auto',
+    paddingRight: '10%',
+    paddingLeft: '10%',
   },
   pinkBackground: {
     backgroundColor: '#FDEEE6',

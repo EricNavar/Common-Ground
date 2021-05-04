@@ -2,7 +2,6 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
 import Emoji1 from './../assets/emoji1.png';
 import Emoji2 from './../assets/emoji2.png';
 import Emoji3 from './../assets/emoji3.png';
@@ -12,6 +11,8 @@ const useStyles = makeStyles({
     maxWidth: 1080,
     marginLeft: 'auto',
     marginRight: 'auto',
+    paddingRight: '10%',
+    paddingLeft: '10%',
     marginTop: 100
   },
   profileHeader: {
@@ -38,9 +39,6 @@ const useStyles = makeStyles({
       borderColor:'#FFD731',
       width: '60%'
     },
-  },
-  link: {
-    textDecoration: 'underline'
   }
 });
 
@@ -222,14 +220,6 @@ export default function Error404Page() {
           </ul>
         </Grid>
       </Grid>
-      <Link href='https://www.figma.com/file/lchOctjE3qJadScBVgdWlz/?node-id=54%3A327' variant='h2' className={classes.link}>
-        WIREFRAMES LINK
-      </Link>
-      <br/>
-      <br/>
-      <Link href='https://www.figma.com/file/lchOctjE3qJadScBVgdWlz/?node-id=54%3A1879' variant='h2' className={classes.link}>
-        TASK FLOW LINK
-      </Link>
     </section>
   );
 }

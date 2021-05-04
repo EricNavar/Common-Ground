@@ -3,12 +3,14 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   marketAnalysis: {
     marginTop: 100,
     maxWidth: 1080,
     marginLeft: 'auto',
     marginRight: 'auto',
+    paddingRight: '10%',
+    paddingLeft: '10%',
   },
   circleOuter: {
     borderStyle: 'solid',
@@ -40,8 +42,25 @@ const useStyles = makeStyles({
   },
   topMargin: {
     marginTop: 24
+  },
+  middleCircle: {
+    borderColor: '#FF9933',
+    [theme.breakpoints.down('xs')]: {
+      width: 200,
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: 250,
+    },
+  },
+  stakeholdersChart: {
+    [theme.breakpoints.down('xs')]: {
+      width: 300,
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: 400,
+    },
   }
-});
+}));
 
 
 export default function Error404Page() {
@@ -56,15 +75,16 @@ export default function Error404Page() {
         direction="row"
         justify="center"
         alignItems="center"
+        spacing={8}
       >
         <Grid item xs={12} md={6}>
-          <div id='stakeholders' style={{width:400}}>
+          <div id='stakeholders' className={classes.stakeholdersChart}>
             <div className={classes.circleOuter} color='primary'>
               <div className={classes.circleInner}>
                 <Typography variant='body2' className={classes.bottomMargin} style={{color:'#FF6E6E'}}>
                   delivery
                 </Typography>
-                <div className={classes.circleOuter} style={{ width: 250, borderColor: '#FF9933' }}>
+                <div className={[classes.circleOuter, classes.middleCircle].join(' ')}>
                   <div className={classes.circleInner}>
                     <Typography variant='body2' className={classes.bottomMargin} style={{color:'#FF9933'}}>
                       users
