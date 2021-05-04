@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Error404Page() {
+export default function MarketAnalysis() {
   React.useEffect(() => {
     document.title = 'Page not found | DC Rock Fitness';
   }, []);

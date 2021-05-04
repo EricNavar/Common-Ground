@@ -15,7 +15,6 @@ const useStyles = makeStyles({
     paddingRight: '10%',
     paddingLeft: '10%',
     display: 'flex',
-    //alignItems: 'start',
   },
   mockup: {
     maxWidth: '100%',
@@ -33,30 +32,36 @@ const useStyles = makeStyles({
     width: 500,
     maxWidth: '80%',
     marginLeft: 'auto',
-    marginRight: '10%',
+    marginRight: 'auto',
     marginTop: 110,
     marginBottom: 80
   },
   gridItem: {
     height: '100%',
     paddingBottom: '0px !important'
+  },
+  grid: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    paddingRight: '10%',
+    paddingLeft: '10%',
   }
 });
 
-export default function Error404Page() {
+export default function Reflection() {
   React.useEffect(() => {
     document.title = 'Page not found | DC Rock Fitness';
   }, []);
   const classes = useStyles();
   return (
-    <section className={classes.grid}>
+    <section id='reflection'>
       <Grid
         container
         direction="row"
         justify="center"
         alignItems="stretch"
-        className={classes.grid}
         spacing={8}
+        className={classes.grid}
       >
         <Grid item xs={12} md={6} className={classes.gridItem} style={{textAlign:'center'}}>
           <img src={Mockup} alt='mockup' width='600px' className={classes.mockup} />

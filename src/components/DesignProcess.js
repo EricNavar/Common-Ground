@@ -11,7 +11,8 @@ const useStyles = makeStyles({
     marginRight: 'auto',
     paddingRight: '10%',
     paddingLeft: '10%',
-    marginTop: 100
+    marginTop: 100,
+    marginBottom: 80
   },
   link: {
     textDecoration: 'underline',
@@ -19,7 +20,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function Error404Page() {
+export default function DesignProcess() {
   React.useEffect(() => {
     document.title = 'Common Ground';
   }, []);
@@ -172,12 +173,12 @@ export default function Error404Page() {
           </ul>
         </Grid>
       </Grid>
-      <Link href='https://www.figma.com/file/lchOctjE3qJadScBVgdWlz/?node-id=54%3A327' variant='h2' className={classes.link}>
+      <Link rel="noreferrer noopener" target="_blank" href='https://www.figma.com/file/lchOctjE3qJadScBVgdWlz/?node-id=54%3A327' variant='h2' className={classes.link}>
         WIREFRAMES LINK
       </Link>
       <br/>
       <br/>
-      <Link href='https://www.figma.com/file/lchOctjE3qJadScBVgdWlz/?node-id=54%3A1879' variant='h2' className={classes.link}>
+      <Link rel="noreferrer noopener" target="_blank" href='https://www.figma.com/file/lchOctjE3qJadScBVgdWlz/?node-id=54%3A1879' variant='h2' className={classes.link}>
         TASK FLOW LINK
       </Link>
     </section>

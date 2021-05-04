@@ -42,7 +42,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function Error404Page() {
+export default function UserResearch() {
   React.useEffect(() => {
     document.title = 'Page not found | DC Rock Fitness';
   }, []);

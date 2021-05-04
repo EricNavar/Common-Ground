@@ -49,7 +49,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function Error404Page() {
+export default function Header() {
   React.useEffect(() => {
     document.title = 'Page not found | DC Rock Fitness';
   }, []);
